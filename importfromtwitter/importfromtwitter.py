@@ -1,5 +1,7 @@
 #!/usr/bin/python2
 
+from __future__ import print_function, unicode_literals
+
 from bs4 import BeautifulSoup
 import requests
 
@@ -29,4 +31,4 @@ def pull(tweet_url):
 # Run tests.
 if __name__ == "__main__":
     test = pull('https://twitter.com/libeclipse/status/728907625648238594')
-    print test()
+    print(test())

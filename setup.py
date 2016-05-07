@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='importfromtwitter',
-      version='1.0.0',
+      version='1.0.1',
       description='Host and import your python functions from Twitter!',
       long_description='Disclaimer: This is not a serious project, just a bit of fun.',
       url='https://github.com/libeclipse/import-from-twitter',
