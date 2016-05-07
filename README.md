@@ -39,6 +39,6 @@ or
 import importfrom
 
 # Twitter
-test = importfrom.twitter('https://twitter.com/libeclipse/status/728907625648238594')
-print test()
+hello = twitter('https://twitter.com/libeclipse/status/729058974302089216')
+print(hello('Eclipse'))
 ```

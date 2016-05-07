@@ -30,5 +30,6 @@ def twitter(tweet_url):
 
 # Run tests.
 if __name__ == "__main__":
-    test = twitter('https://twitter.com/libeclipse/status/728907625648238594')
-    print('Twitter: ' + test())
+    # Twitter
+    hello = twitter('https://twitter.com/libeclipse/status/729058974302089216')
+    print('Twitter: ' + hello('Eclipse'))
