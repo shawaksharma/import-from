@@ -21,5 +21,15 @@ def pull(tweet_url):
     tweet = get_tweet(tweet_url)
     globals_ = {'__builtins__': None}  # no built-ins for safety
     locals_ = {}
-    exec(tweet, globals_, locals_)
+    try:
+        exec(tweet, globals_, locals_)
+    except:
+        raise Exception('Invalid code.')
+    if len(locals_) != 1:
+        raise Exception('Only a single function per Tweet is supported.')
     return locals_.popitem()[1]  # return the function
+
+# Run tests.
+if __name__ == "__main__":
+    test = pull('https://twitter.com/libeclipse/status/728907625648238594')
+    print test()
