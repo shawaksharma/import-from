@@ -2,7 +2,7 @@
 
 Host and import your python functions from Twitter!
 
-(*Disclaimer: This is not a serious project. Just a bit of fun.*)
+(*Disclaimer: This is not a serious project, just a bit of fun.*)
 
 ## Usage:
 

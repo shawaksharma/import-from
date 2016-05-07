@@ -18,7 +18,7 @@ def get_tweet(tweet_url):
 
 
 def pull(tweet_url):
-    tweet = get_tweet(tweet_url)
+    tweet = get_tweet(tweet_url) # Get string containing tweet text
     globals_ = {'__builtins__': None}  # no built-ins for safety
     locals_ = {}
     try:
@@ -28,6 +28,7 @@ def pull(tweet_url):
     if len(locals_) != 1:
         raise Exception('Only a single function per Tweet is supported.')
     return locals_.popitem()[1]  # return the function
+
 
 # Run tests.
 if __name__ == "__main__":
