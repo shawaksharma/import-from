@@ -2,7 +2,7 @@
 
 This module allows you to import python modules from anywhere!
 
-**It's early days. Help out by submitting a pull request!**
+**It's early days. Help out by submitting a pull request.**
 
 ### Currently supported hosts:
 
