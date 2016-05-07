@@ -1,6 +1,12 @@
-# Import from Twitter
+# Import From (Anywhere)
 
-Host and import your python functions from Twitter!
+This module allows you to import python modules from anywhere!
+
+**It's early days. Help out by submitting a pull request!**
+
+### Currently supported hosts:
+
+- Twitter
 
 (*Disclaimer: This is not a serious project, just a bit of fun.*)
 
@@ -10,19 +16,19 @@ Host and import your python functions from Twitter!
 
 **Install using pip in order to get the latest stable release.**
 
-`~ >> pip install importfromtwitter`
+`~ >> pip install importfrom`
 
 or
 
-`~ >> python -m pip install importfromtwitter`
+`~ >> python -m pip install importfrom`
 
 ### Option 2: git clone
 
 **Install using git to be at the bleeding edge. You'll receive the latest commit.**
 
 ```
-~ >> git clone https://github.com/libeclipse/import-from-twitter.git
-~ >> cd import-from-twitter
+~ >> git clone https://github.com/libeclipse/import-from.git
+~ >> cd import-from
 ~ >> python setup.py install
 ```
 
@@ -30,11 +36,9 @@ or
 
 ```
 # Import the module
-import importfromtwitter
+import importfrom
 
-# Initialize `test` with the function.
-test = importfromtwitter.pull('https://twitter.com/libeclipse/status/728907625648238594')
-
-# Call the function.
+# Twitter
+test = importfrom.twitter('https://twitter.com/libeclipse/status/728907625648238594')
 print test()
 ```
