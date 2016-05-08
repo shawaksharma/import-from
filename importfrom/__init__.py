@@ -50,8 +50,8 @@ def twitter(url):
 if __name__ == "__main__":
     # Twitter
     hello = twitter('https://twitter.com/libeclipse/status/729058974302089216')
-    print('Twitter: ' + hello('Eclipse'))
+    print('Twitter: ' + hello('world'))
 
     # Pastebin
     hello = pastebin('http://pastebin.com/hgw7mphJ')
-    print('Pastebin: ' + hello('Eclipse'))
+    print('Pastebin: ' + hello('world'))

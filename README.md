@@ -1,6 +1,6 @@
 # Import From (Anywhere)
 
-This module allows you to import python modules from anywhere!
+This module allows you to import python functions from anywhere!
 
 **It's early days. Help out by submitting a pull request.**
 
@@ -27,9 +27,9 @@ import importfrom
 
 # Twitter
 hello = twitter('https://twitter.com/libeclipse/status/729058974302089216')
-print('Twitter: ' + hello('Eclipse'))
+print('Twitter: ' + hello('world'))
 
 # Pastebin
 hello = pastebin('http://pastebin.com/hgw7mphJ')
-print('Pastebin: ' + hello('Eclipse'))
+print('Pastebin: ' + hello('world'))
 ```
