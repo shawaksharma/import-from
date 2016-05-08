@@ -7,6 +7,7 @@ This module allows you to import python modules from anywhere!
 Currently supported hosts:
 
 - Twitter
+- Pastebin
 
 *(Disclaimer: This is not a serious project, just a bit of fun.)*
 
