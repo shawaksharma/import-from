@@ -27,7 +27,7 @@ import importfrom
 
 # Twitter
 hello = twitter('https://twitter.com/libeclipse/status/729058974302089216')
-print(hello('Eclipse'))
+print('Twitter: ' + hello('Eclipse'))
 
 # Pastebin
 hello = pastebin('http://pastebin.com/hgw7mphJ')
