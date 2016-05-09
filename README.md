@@ -26,10 +26,10 @@ or
 import importfrom
 
 # Twitter
-hello = twitter('https://twitter.com/libeclipse/status/729058974302089216')
+hello = importfrom.twitter('https://twitter.com/libeclipse/status/729058974302089216')
 print('Twitter: ' + hello('world'))
 
 # Pastebin
-hello = pastebin('http://pastebin.com/hgw7mphJ')
+hello = importfrom.pastebin('http://pastebin.com/hgw7mphJ')
 print('Pastebin: ' + hello('world'))
 ```
