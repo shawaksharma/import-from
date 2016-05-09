@@ -6,23 +6,22 @@ from bs4 import BeautifulSoup
 import requests
 
 
+def magic(code):
+    globals_ = {'__builtins__': None}  # no built-ins for safety
+    locals_ = {}
+    try:
+        exec(code, globals_, locals_)
+    except:
+        raise Exception('Invalid code.')
+    if len(locals_) != 1:
+        raise Exception('Only a single function per tweet is supported.')
+    return locals_.popitem()[1]  # return the function
+
+
 def pastebin(url):
     if not 'raw' in url:
         url = 'https://pastebin.com/raw/%s' % url.split('/')[-1].strip()
-    page = requests.get(url).text
-
-    globals_ = {'__builtins__': None}  # no built-ins for safety
-    locals_ = {}
-
-    try:
-        exec(page, globals_, locals_)
-    except:
-        raise Exception('Invalid code.')
-
-    if len(locals_) != 1:
-        raise Exception('Only a single function per tweet is supported.')
-
-    return locals_.popitem()[1]  # return the function
+    return magic(requests.get(url).text)
 
 
 def twitter(url):
@@ -31,19 +30,7 @@ def twitter(url):
         text = page.body.find('div', attrs={'class':'js-tweet-text-container'}).text.strip()
     except AttributeError:
         raise Exception('No tweet found at that URL.')
-
-    globals_ = {'__builtins__': None}  # no built-ins for safety
-    locals_ = {}
-
-    try:
-        exec(text, globals_, locals_)
-    except:
-        raise Exception('Invalid code.')
-
-    if len(locals_) != 1:
-        raise Exception('Only a single function per tweet is supported.')
-
-    return locals_.popitem()[1]  # return the function
+    return magic(text)
 
 
 # Run tests.
