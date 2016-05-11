@@ -21,6 +21,17 @@ or
 
 ## Usage:
 
+First of all, you have to upload the code. Each snippet must contain exactly one function.
+
+For example:
+
+```
+def hello(name):
+    return 'Hello, %s!' % name
+```
+
+Then, you can import and use it as normal:
+
 ```
 # Import the module
 import importfrom
