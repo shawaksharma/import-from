@@ -6,6 +6,19 @@ from bs4 import BeautifulSoup
 import requests
 
 
+# Fix the supplied url so requests doesn't complain.
+def fix_url(url):
+    if ((not url.startswith("http://")) and (not url.startswith("https://"))):
+        url = "http://" + url
+    if (url.endswith("/")):
+        url = url[:-1]
+    return url
+
+    
+def request(url):
+    return requests.get(fix_url(url)).text
+
+
 def magic(code):
     globals_ = {'__builtins__': None}  # no built-ins for safety
     locals_ = {}
@@ -20,12 +33,12 @@ def magic(code):
 
 def pastebin(url):
     if not 'raw' in url:
-        url = 'https://pastebin.com/raw/%s' % url.split('/')[-1].strip()
-    return magic(requests.get(url).text)
+        url = 'http://pastebin.com/raw/%s' % url.split('/')[-1].strip()
+    return magic(request(url))
 
 
 def twitter(url):
-    page = BeautifulSoup(requests.get(url).text, "html.parser")
+    page = BeautifulSoup(request(url), "html.parser")
     try:
         text = page.body.find('div', attrs={'class':'js-tweet-text-container'}).text.strip()
     except AttributeError:
