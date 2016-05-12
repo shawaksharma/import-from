@@ -8,6 +8,7 @@ Currently supported hosts:
 
 - Twitter
 - Pastebin
+- Gist
 
 *(Disclaimer: This is not a serious project, just a bit of fun.)*
 
@@ -43,4 +44,8 @@ print('Twitter: ' + hello('world'))
 # Pastebin
 hello = importfrom.pastebin('http://pastebin.com/hgw7mphJ')
 print('Pastebin: ' + hello('world'))
+
+# Gist
+hello = importfrom.gist('https://gist.github.com/libeclipse/b240d9b0fff2a65233a30457aad99f12')
+print('Gist: ' + hello('world'))
 ```

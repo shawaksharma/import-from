@@ -14,7 +14,7 @@ def fix_url(url):
         url = url[:-1]
     return url
 
-    
+
 def request(url):
     return requests.get(fix_url(url)).text
 
@@ -46,6 +46,12 @@ def twitter(url):
     return magic(text)
 
 
+def gist(url):
+    if not '/raw' in url:
+        url = url + '/raw'
+    return magic(request(url))
+
+
 # Run tests.
 if __name__ == "__main__":
     # Twitter
@@ -55,3 +61,7 @@ if __name__ == "__main__":
     # Pastebin
     hello = pastebin('http://pastebin.com/hgw7mphJ')
     print('Pastebin: ' + hello('world'))
+
+    # Gist
+    hello = gist('https://gist.github.com/libeclipse/b240d9b0fff2a65233a30457aad99f12')
+    print('Gist: ' + hello('world'))
