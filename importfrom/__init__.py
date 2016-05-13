@@ -65,3 +65,9 @@ if __name__ == "__main__":
     # Gist
     hello = gist('https://gist.github.com/libeclipse/b240d9b0fff2a65233a30457aad99f12')
     print('Gist: ' + hello('world'))
+
+    # Self-implementation
+    string = """def hello(name):
+        return 'Hello, %s!' % name"""
+    hello = magic(string)
+    print('Self-implementation: ' + hello('world'))
