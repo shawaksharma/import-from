@@ -49,3 +49,17 @@ print('Pastebin: ' + hello('world'))
 hello = importfrom.gist('https://gist.github.com/libeclipse/b240d9b0fff2a65233a30457aad99f12')
 print('Gist: ' + hello('world'))
 ```
+
+If the service you want isn't already implemented, you add it yourself!
+
+```
+import importfrom
+
+# Code to get string containing function
+...
+
+hello = importfrom.magic(string)
+print(hello('world'))
+```
+
+If you do add another service, consider contributing by opening a pull request.
