@@ -55,7 +55,7 @@ If the service you want isn't already implemented, you add it yourself!
 ```
 import importfrom
 
-# Code to get string containing function
+# Code to grab a string containing the function.
 string = """def hello(name):
     return 'Hello, %s!' % name"""
 
