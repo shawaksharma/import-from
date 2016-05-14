@@ -1,6 +1,6 @@
 # Import From (Anywhere)
 
-[![PyPI](https://img.shields.io/pypi/dm/importfrom.svg?style=flat-square)](https://pypi.python.org/pypi/importfrom) [![PyPI](https://img.shields.io/pypi/v/importfrom.svg?style=flat-square)](https://pypi.python.org/pypi/importfrom) [![PyPI](https://img.shields.io/pypi/l/importfrom.svg?style=flat-square)](https://pypi.python.org/pypi/importfrom)
+ [![PyPI](https://img.shields.io/pypi/v/importfrom.svg?style=flat-square)](https://pypi.python.org/pypi/importfrom) [![PyPI](https://img.shields.io/pypi/l/importfrom.svg?style=flat-square)](https://pypi.python.org/pypi/importfrom)
 
 This module allows you to import python functions from anywhere!
 
