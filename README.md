@@ -52,7 +52,7 @@ hello = importfrom.gist('https://gist.github.com/libeclipse/b240d9b0fff2a65233a3
 print('Gist: ' + hello('world'))
 ```
 
-If the service you want isn't already implemented, you add it yourself!
+If the service you want isn't already implemented, you can add it yourself!
 
 ```
 import importfrom
