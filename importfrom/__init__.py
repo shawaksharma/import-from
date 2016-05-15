@@ -20,12 +20,8 @@ def request(url):
 
 
 def magic(code):
-    globals_ = {'__builtins__': None}  # no built-ins for safety
     locals_ = {}
-    try:
-        exec(code, globals_, locals_)
-    except:
-        raise Exception('Invalid code.')
+    exec(code, {'__builtins__': None}, locals_)
     if len(locals_) != 1:
         raise Exception('Only a single function per tweet is supported.')
     return locals_.popitem()[1]  # return the function
