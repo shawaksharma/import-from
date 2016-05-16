@@ -22,9 +22,7 @@ def request(url):
 def magic(code):
     locals_ = {}
     exec(code, {'__builtins__': None}, locals_)
-    if len(locals_) != 1:
-        raise Exception('Only a single function per tweet is supported.')
-    return locals_.popitem()[1]  # return the function
+    return locals_  # return the functions
 
 
 def pastebin(url):
@@ -51,19 +49,23 @@ def gist(url):
 # Run tests.
 if __name__ == "__main__":
     # Twitter
-    hello = twitter('https://twitter.com/libeclipse/status/729058974302089216')
+    functions = twitter('https://twitter.com/libeclipse/status/729058974302089216')
+    hello = functions['hello']
     print('Twitter: ' + hello('world'))
 
     # Pastebin
-    hello = pastebin('http://pastebin.com/hgw7mphJ')
+    functions = pastebin('http://pastebin.com/hgw7mphJ')
+    hello = functions['hello']
     print('Pastebin: ' + hello('world'))
 
     # Gist
-    hello = gist('https://gist.github.com/libeclipse/b240d9b0fff2a65233a30457aad99f12')
+    functions = gist('https://gist.github.com/libeclipse/b240d9b0fff2a65233a30457aad99f12')
+    hello = functions['hello']
     print('Gist: ' + hello('world'))
 
     # Self-implementation
     string = """def hello(name):
-        return 'Hello, %s!' % name"""
-    hello = magic(string)
+        return 'Hello, %s!' % name\n\ndef hi(name):\n\treturn 'Hello, %s!' % name"""
+    functions = magic(string)
+    hello = functions['hello']
     print('Self-implementation: ' + hello('world'))
