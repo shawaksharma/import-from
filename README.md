@@ -67,8 +67,11 @@ def bye(name):
     return 'Bye, %s!' % name
 """
 
+functions = importfrom.magic(string)
+
 hello = functions['hello']
 bye = functions['bye']
+
 print('%s\n%s' % (hello('world'), bye('world')))
 ```
 
