@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='importfrom',
-      version='1.1.3',
+      version='1.2.0',
       description='Import python functions from anywhere!',
       long_description='Disclaimer: This is not a serious project, just a bit of fun.',
       url='https://github.com/libeclipse/import-from',

@@ -24,13 +24,16 @@ or
 
 ## Usage:
 
-First of all, you have to upload the code. Each snippet must contain exactly one function.
+First of all, you have to upload the code.
 
 For example:
 
 ```
 def hello(name):
     return 'Hello, %s!' % name
+
+def bye(name):
+    return 'Bye, %s!' % name
 ```
 
 Then, you can import and use it as normal:
@@ -39,17 +42,15 @@ Then, you can import and use it as normal:
 # Import the module
 import importfrom
 
-# Twitter
-hello = importfrom.twitter('https://twitter.com/libeclipse/status/729058974302089216')
-print('Twitter: ' + hello('world'))
+# Parse and exec functions
+functions = importfrom.twitter('https://twitter.com/libeclipse/status/732279611002912769')
 
-# Pastebin
-hello = importfrom.pastebin('http://pastebin.com/hgw7mphJ')
-print('Pastebin: ' + hello('world'))
+# Assign functions to variables
+hello = functions['hello']
+bye = functions['bye']
 
-# Gist
-hello = importfrom.gist('https://gist.github.com/libeclipse/b240d9b0fff2a65233a30457aad99f12')
-print('Gist: ' + hello('world'))
+# Call and use functions
+print('%s\n%s' % (hello('world'), bye('world')))
 ```
 
 If the service you want isn't already implemented, you can add it yourself!
@@ -58,11 +59,16 @@ If the service you want isn't already implemented, you can add it yourself!
 import importfrom
 
 # Code to grab a string containing the function.
-string = """def hello(name):
-    return 'Hello, %s!' % name"""
+string = """
+def hello(name):
+    return 'Hello, %s!' % name
 
-hello = importfrom.magic(string)
-print(hello('world'))
+def bye(name):
+    return 'Bye, %s!' % name"""
+
+hello = functions['hello']
+bye = functions['bye']
+print('%s\n%s' % (hello('world'), bye('world')))
 ```
 
 If you do add another service, consider contributing by opening a pull request.
