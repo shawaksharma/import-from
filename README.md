@@ -64,7 +64,8 @@ def hello(name):
     return 'Hello, %s!' % name
 
 def bye(name):
-    return 'Bye, %s!' % name"""
+    return 'Bye, %s!' % name
+"""
 
 hello = functions['hello']
 bye = functions['bye']
