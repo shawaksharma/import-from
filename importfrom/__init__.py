@@ -20,9 +20,9 @@ def request(url):
 
 
 def magic(code):
-    locals_ = {}
-    exec(code, {'__builtins__': None}, locals_)
-    return locals_  # return the functions
+    namespace = {}
+    exec(code) in namespace
+    return namespace
 
 
 def pastebin(url):
@@ -65,7 +65,7 @@ if __name__ == "__main__":
 
     # Self-implementation
     string = """def hello(name):
-        return 'Hello, %s!' % name\n\ndef hi(name):\n\treturn 'Hello, %s!' % name"""
+        return 'Hello, %s!' % name"""
     functions = magic(string)
     hello = functions['hello']
     print('Self-implementation: ' + hello('world'))
