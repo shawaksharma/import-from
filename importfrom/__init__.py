@@ -20,8 +20,9 @@ def request(url):
 
 
 def magic(code):
+    code = compile(code, '<string>', 'exec')
     locals_ = {}
-    exec(code, {}, locals_)
+    exec(code, locals_)
     return locals_
 
 
