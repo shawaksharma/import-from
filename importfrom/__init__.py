@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 from __future__ import print_function, unicode_literals
 
@@ -21,9 +21,9 @@ def request(url):
 
 def magic(code):
     code = compile(code, '<string>', 'exec')
-    locals_ = {}
-    exec(code, locals_)
-    return locals_
+    namespace = {}
+    exec(code, namespace)
+    return namespace
 
 
 def pastebin(url):
