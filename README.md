@@ -1,6 +1,6 @@
 # Import From (Anywhere)
 
- [![PyPI](https://img.shields.io/pypi/v/importfrom.svg?style=flat-square)](https://pypi.python.org/pypi/importfrom) [![PyPI](https://img.shields.io/pypi/l/importfrom.svg?style=flat-square)](https://pypi.python.org/pypi/importfrom)
+ [![PyPI](https://img.shields.io/pypi/v/importfrom.svg)](https://pypi.python.org/pypi/importfrom) [![PyPI](https://img.shields.io/pypi/l/importfrom.svg)](https://pypi.python.org/pypi/importfrom) [![Dependency Status](https://dependencyci.com/github/libeclipse/import-from/badge)](https://dependencyci.com/github/libeclipse/import-from)
 
 This module allows you to import python functions from anywhere!
 
