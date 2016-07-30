@@ -49,7 +49,7 @@ functions = importfrom.twitter('https://twitter.com/libeclipse/status/7322796110
 hello = functions['hello']
 bye = functions['bye']
 
-# Call and use functions
+# Call and use functions as normal
 print('%s\n%s' % (hello('world'), bye('world')))
 ```
 
@@ -58,7 +58,7 @@ If the service you want isn't already implemented, you can add it yourself!
 ```
 import importfrom
 
-# Code to grab a string containing the function.
+# Code to grab a string containing the functio(n|ns).
 string = """
 def hello(name):
     return 'Hello, %s!' % name
