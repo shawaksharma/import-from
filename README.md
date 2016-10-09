@@ -41,10 +41,10 @@ Then, you can import and use it as normal:
 
 ```
 # Import the module
-import importfrom
+from importfrom import twitter
 
 # Parse and exec functions
-functions = importfrom.twitter('https://twitter.com/libeclipse/status/732279611002912769')
+functions = twitter('https://twitter.com/libeclipse/status/732279611002912769')
 
 # Assign functions to variables
 hello = functions['hello']
@@ -57,7 +57,7 @@ print('%s\n%s' % (hello('world'), bye('world')))
 If the service you want isn't already implemented, you can add it yourself!
 
 ```
-import importfrom
+from importfrom import magic
 
 # Code to grab a string containing the functio(n|ns).
 string = """
@@ -68,7 +68,7 @@ def bye(name):
     return 'Bye, %s!' % name
 """
 
-functions = importfrom.magic(string)
+functions = magic(string)
 
 hello = functions['hello']
 bye = functions['bye']
