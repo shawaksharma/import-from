@@ -6,22 +6,15 @@ from bs4 import BeautifulSoup
 import requests
 
 
-# Fix the supplied url so requests doesn't complain.
-def fix_url(url):
-    if ((not url.startswith("http://")) and (not url.startswith("https://"))):
-        url = "http://" + url
-    if (url.endswith("/")):
-        url = url[:-1]
-    return url
-
-
 def request(url):
-    return requests.get(fix_url(url)).text
+    if not url.startswith("http://") and not url.startswith("https://"):
+        url = "http://" + url
+    return requests.get(url).text
 
 
 def magic(code):
-    code = compile(code, '<string>', 'exec')
     namespace = {}
+    code = compile(code, '<string>', 'exec')
     exec(code, namespace)
     return namespace
 
