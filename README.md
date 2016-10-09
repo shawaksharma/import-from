@@ -11,6 +11,7 @@ Currently supported hosts:
 - Twitter
 - Pastebin
 - Gist
+- DNS TXT Records
 
 *(Disclaimer: This is not a serious project, just a bit of fun.)*
 
