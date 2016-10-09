@@ -54,6 +54,15 @@ bye = functions['bye']
 print('%s\n%s' % (hello('world'), bye('world')))
 ```
 
+The DNS function has to be handled slightly differently. Create a TXT record for a distinct subdomain on your domain, and place your code in that. If there are multiple TXT records then there's no guarantee as to which one will be chosen.
+
+Here's an example:
+
+```
+hello = dns('importfrom-hello.libeclipse.me')['hello']
+bye = dns('importfrom-bye.libeclipse.me')['bye']
+```
+
 If the service you want isn't already implemented, you can add it yourself!
 
 ```
